@@ -23,6 +23,8 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           script: |
+            # Check if the directory exists, if not create it
+            [ ! -d /srv/projects/repos/splitly ] && mkdir -p /srv/projects/repos/splitly
             # Change directory to where your repository is located
             cd /srv/projects/repos/splitly
             # Pull latest changes from the main branch
