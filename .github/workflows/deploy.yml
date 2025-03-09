@@ -26,6 +26,7 @@ jobs:
             # Check if the directory exists, if not clone it
             [ ! -d /srv/projects/repos/splitly ] && git clone https://github.com/sanskaryal/splitly.git
             # Pull latest changes from the main branch
+            cd splitly
             git pull origin main
             # Rebuild and restart the container
             docker compose down
