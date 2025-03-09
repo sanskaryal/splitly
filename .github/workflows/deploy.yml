@@ -28,5 +28,5 @@ jobs:
             # Pull latest changes from the main branch
             git pull origin main
             # Rebuild and restart the container
-            docker-compose down
-            docker-compose up -d --build
+            docker compose down
+            docker compose up -d --build
